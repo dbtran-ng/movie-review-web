@@ -1,0 +1,178 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #717171;
+}
+
+::selection {
+  background-color: #ec7532;
+  color: white;
+}
+h1,
+h3 {
+  color: #ec7532;
+}
+
+/* line style */
+
+.line::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:linear-gradient(to right,#fbbd61,#ec7532) ;
+    display: block;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: 0.5s;
+}
+
+.line:hover::after{
+    width: 100%;
+}
+
+.line.active::after{
+    width: 100%;
+}
+/* HEADER */
+header{
+    top:20px;
+    left:50%;
+    background:linear-gradient(to left,#fbbd61,#fff) ;
+}
+header p{
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+#movieNavBar .navbar-nav {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#movieNavBar .navbar-nav .nav-link{
+    color: black;
+    letter-spacing: 3px;
+    line-height: 0.8em;
+    padding: 20px 24px;
+}
+
+
+
+/* SIGN UP */
+fieldset {
+  border: none;
+  border-top: 1px solid #ec7532;
+}
+.signup {
+  margin: auto;
+  width: 50%;
+  align-items: center;
+}
+.account__details,
+.personal__details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px auto;
+}
+
+.account__details > div,
+.personal__details > div > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.account__details > div,
+.personal__details > div,
+input,
+label {
+  width: 60%;
+}
+label {
+  padding: 0 5px;
+  text-align: right;
+  vertical-align: middle;
+}
+input {
+  padding: 5px;
+  vertical-align: middle;
+}
+.checkbox {
+  margin-bottom: 10px;
+}
+
+.gender,
+.bdate-block {
+  width: calc(60% +26px);
+  padding: 5px 0;
+}
+select {
+  background: transparent;
+}
+.gender input {
+    width: 30%;
+}
+.gender label {
+  padding-right: 20%;
+}
+.bdate-block {
+  display: flex;
+  justify-content: space-between;
+}
+.birthdate select.day {
+  width: 35px;
+}
+.birthdate select.month {
+  width: calc(100% - 94px);
+}
+.birthdate input {
+  width: 48px;
+  vertical-align: unset;
+}
+.checkbox input {
+  width: auto;
+  margin: -2px 10px 0 0;
+}
+.checkbox a {
+  color: #ec7532;
+}
+.checkbox a:hover {
+  color: #ec7532;
+}
+
+button {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+button:hover {
+  background: #ec7532;
+}
+@media (min-width: 568px) {
+  .account-details > div,
+  .personal-details > div {
+    width: 50%;
+  }
+  label {
+    width: 40%;
+  }
+  input {
+    width: 60%;
+  }
+  select,
+  .children,
+  .gender,
+  .bdate-block {
+    width: calc(60% + 16px);
+  }
+}

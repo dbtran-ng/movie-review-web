@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <!-- BS4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        
+ 
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+
+ 	<jsp:include page="header.html"></jsp:include>
+    <div class="signup">
+        <form action="/">
+            <h1>Create a free account</h1>
+            <fieldset>
+                <legend>
+                    <h3>Account Details</h3>
+                </legend>
+                <div class="account__details">
+                    <div><label>Email*</label><input type="text" name="name" required></div>
+                    <div><label>Username*</label><input type="password" name="name" required></div>
+                    <div><label>Password*</label><input type="text" name="name" required></div>
+                    <div><label>Repeat password*</label><input type="password" name="name" required></div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h3>Personal Details</h3>
+                </legend>
+                <div class="personal__details">
+                    <div>
+                        <div><label>First Name*</label><input type="text" name="name" required></div>
+                        <div><label>Last Name*</label><input type="text" name="name" required></div>
+                        <div><label>Street</label><input type="text" name="name"></div>
+                        <div><label>City*</label><input type="text" name="name" required></div>
+                    </div>
+                    <div>
+                        <div>
+                            <label>Gender*</label>
+                            <div class="gender">
+                                <input type="radio" value="none" id="male" name="gender" required />
+                                <label for="male" class="radio">Male</label>
+                                <input type="radio" value="none" id="female" name="gender" required />
+                                <label for="female" class="radio">Female</label>
+                            </div>
+                        </div>
+                        <div class="birthdate">
+                            <label>Birthdate*</label>
+                            <div class="bdate-block">
+                                <select class="day" required>
+                                    <option value=""></option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select class="month" required>
+                                    <option value=""></option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                                <input type="number" name="year" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="terms">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox"><span>I accept the <a
+                                href="#">Privacy Policy for WhatToWatch.</a></span>
+                    </div>
+            </fieldset>
+            <button type="submit" href="/">Submit</button>
+        </form>
+    </div>
+
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- BS4 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
