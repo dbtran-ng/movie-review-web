@@ -98,11 +98,11 @@ header p{
     z-index: 16;
 }
 
-.search__bar p{
-    margin: auto auto;
+.search__button button{
+	color:white;
+	border: none;
+	margin: auto;
 }
-
-
 
 /* RESPONSIVE */
 @media screen and (max-width:991.98px){

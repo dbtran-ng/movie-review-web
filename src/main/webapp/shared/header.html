@@ -3,15 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
-	<jsp:include page="/shared/style_import.jsp" />
+    <title>What To Watch</title>
+
+  <jsp:include page="/shared/style_import.jsp" />
+
 </head>
 
 <body>
 
-    <header>
+    <!-- HEADER -->
+    <header class="container-fluid">
+   
+
+        <div class="search__bar d-flex flex-row-reverse align-items-center">
+            <div class="p-2"> <form class="search-form form-inline my-2 my-lg-0 ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form></div>
+            <div class="p-2 align-items-center"> <p>Search Any Movies</p></div>
+          </div>
+
+        
         <nav class="navbar navbar-expand-md px-0">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" alt="logo">
@@ -25,10 +38,10 @@
             </button>
             <div class="collapse navbar-collapse" id="movieNavBar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item line">
-                        <a class="nav-link" href="<%= request.getContextPath() %>/home">HOME</a>
-                    </li>
                     <li class="nav-item active line">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item line">
                         <a class="nav-link" href="<%= request.getContextPath() %>/login">SIGN IN</a>
                     </li>
                      <li class="nav-item line">
@@ -39,32 +52,9 @@
             </div>
         </nav>
     </header>
-    <div class="login">
-        <form action="<%=request.getContextPath()%>/login" method="post">
-            <h1>Log in to your account</h1>
-            <fieldset>
-                <legend>
-                    <h3>Account Details</h3>
-                </legend>
-                <div class="account__details">
-                
-                    <div><label>Username*</label><input type="text"name="user_name" value="${login.username}" required></div>
-                    <div><label>Password*</label><input type="password" name="user_password" value="${login.password}" required></div>
-    
-                </div>
-            </fieldset>
-            <fieldset>
-                <div class="terms">
-                    <div class="checkbox">
-                        <input type="checkbox" name="rememberMe" value ="Y"/> Remember me
-                    </div>
-            </fieldset>
-            <button type="submit" href="/">Submit</button>
-        </form>
-    </div>
+
 
 	<jsp:include page="/shared/scripts_import.jsp" />
-    
 </body>
 
 </html>

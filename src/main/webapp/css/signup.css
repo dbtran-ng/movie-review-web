@@ -106,38 +106,12 @@ input {
   padding: 5px;
   vertical-align: middle;
 }
-.checkbox {
-  margin-bottom: 10px;
-}
 
-.gender,
-.bdate-block {
-  width: calc(60% +26px);
-  padding: 5px 0;
-}
+
 select {
   background: transparent;
 }
-.gender input {
-    width: 30%;
-}
-.gender label {
-  padding-right: 20%;
-}
-.bdate-block {
-  display: flex;
-  justify-content: space-between;
-}
-.birthdate select.day {
-  width: 35px;
-}
-.birthdate select.month {
-  width: calc(100% - 94px);
-}
-.birthdate input {
-  width: 48px;
-  vertical-align: unset;
-}
+
 .checkbox input {
   width: auto;
   margin: -2px 10px 0 0;
@@ -149,7 +123,7 @@ select {
   color: #ec7532;
 }
 
-button {
+.signup button {
   width: 100%;
   padding: 10px 0;
   margin: 10px auto;
@@ -160,7 +134,7 @@ button {
   font-weight: 600;
   color: #fff;
 }
-button:hover {
+.signup button:hover {
   background: #ec7532;
 }
 @media (min-width: 568px) {

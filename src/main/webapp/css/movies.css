@@ -1,0 +1,138 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+    color:#717171;
+}
+
+::selection{
+    background-color: #ec7532;
+    color: white;
+}
+
+.title{
+    color: #ec7532;
+    font-size: 1.125rem;
+    border-bottom: 1px solid #d8d8d8;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    margin-bottom: 40px;
+}
+.title::after{
+    content: '';
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    width: 125px;
+    height: 4px;
+    display: block;
+    margin-top: 20px;
+}
+
+.title--white{
+    color: white;
+    border-bottom: 1px solid #333;
+}
+
+.menu{
+    padding-top: 100px;
+    margin-left: 100px;
+}
+
+/* MOVIES */
+.movies__col{
+    padding: 15px;
+}
+
+.movies__item{
+    padding: 25px 40px;
+    box-shadow: 0px 1px 8px 0px rgba(158, 158, 158, 0.75);
+    text-align: center;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+.movies__item i{
+    color: #ec7532;
+    font-size: 20px;
+}
+
+.movies__item h3{
+    font-size: 20px;
+    color: black;
+    margin: 25px 0 20px;
+}
+
+.movies__item p{
+    color: #6b6b6b;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.movies{
+    background: #101010 url(../img/slide-3.png);
+    background-size: cover;
+    color: white;
+}
+
+.movies__type{
+    font-size: 14px;
+    color: #ec7532;
+    letter-spacing: 2px;
+
+}
+
+
+.movies p{
+    margin: 1rem 0;
+}
+
+.movies a{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #ec7532;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.movies a:hover{
+    color: white;
+}
+
+.movies__video{
+    position: relative;
+}
+
+.movies__video i{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    border: 1px solid #ec7532;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: 0.5s;
+    color: white;
+}
+
+.movies__video:hover i{
+    transform:translate(-50%,-50%) scale(0.9);
+}
+
+.movies__item a{
+    font-weight: 800;
+    color: #ec7532;
+    font-size: 34px;
+    letter-spacing: 1px;
+    transition: all 0.1s;
+}
+
+.movies__item a:hover{
+    color: #fbbd61;
+}
