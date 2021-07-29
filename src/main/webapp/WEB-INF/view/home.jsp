@@ -36,9 +36,10 @@
      <h2>Movie Review</h2>
       
      <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="login">Login</a></li>
-        <li><a href="movie">Movie</a>
+        <li><a href="home">HOME</a></li>
+        <li><a href="login">SIGN IN</a></li>
+        <li><a href="register">REGISTER</a></li>
+        <li><a href="movies">MOVIE</a>
      </ul>
 
 

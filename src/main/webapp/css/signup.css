@@ -39,28 +39,33 @@ h3 {
     width: 100%;
 }
 /* HEADER */
-header{
+header{ 
     top:20px;
     left:50%;
-    background:linear-gradient(to left,#fbbd61,#fff) ;
+    background-color: #101010;
 }
 header p{
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
-    color: #000;
+}
+.navbar-brand{
+    margin-left: 50px;
+}
+.navbar-brand p{
+    margin-left: 50px;
+    color: #ec7532;
+    font-size: 1.6rem;
 }
 #movieNavBar .navbar-nav {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 #movieNavBar .navbar-nav .nav-link{
-    color: black;
+    color: white;
     letter-spacing: 3px;
     line-height: 0.8em;
     padding: 20px 24px;
 }
-
-
 
 /* SIGN UP */
 fieldset {

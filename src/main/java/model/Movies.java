@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Movie implements Serializable {
+public class Movies implements Serializable {
 	private int movie_id;
-    private String title;
+	private String title;
     private String country;
     private int year;
     private String description;
@@ -17,7 +17,7 @@ public class Movie implements Serializable {
     private List<Review> reviews = new ArrayList<>();
     private String rating;
 
-    public Movie(String title, String country, int year,
+    public Movies(String title, String country, int year,
                  String description, String youtubeTrailer, String imagePath) {
         this.title = title;
         this.country = country;
@@ -28,9 +28,9 @@ public class Movie implements Serializable {
 
     }
 
-    public Movie(int id, String title, String country, int year,
+    public Movies(int movie_id, String title, String country, int year,
                  String description, String youtubeTrailer, String imagePath) {
-    	this.movie_id = id;
+    	this.movie_id = movie_id;
         this.title = title;
         this.country = country;
         this.year = year;
@@ -39,7 +39,18 @@ public class Movie implements Serializable {
         this.imagePath = imagePath;
     }
 
-    public String getTitle() {
+    public Movies() {
+	}
+
+    public int getMovieId() {
+		return movie_id;
+	}
+
+	public void setMovieId(int movie_id) {
+		this.movie_id = movie_id;
+	}
+
+	public String getTitle() {
         return title;
     }
 
@@ -106,7 +117,7 @@ public class Movie implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Movie movie = (Movie) o;
+        Movies movie = (Movies) o;
         return getYear() == movie.getYear()
                 && Objects.equals(getTitle(), movie.getTitle())
                 && Objects.equals(getCountry(), movie.getCountry())
