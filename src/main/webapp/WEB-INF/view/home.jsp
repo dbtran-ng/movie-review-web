@@ -148,7 +148,7 @@
 								<div class="newIn__overlay"></div>
 								<div class="newIn__play">
 									<div>
-										<a href="#"><i class="fa fa-play"></i></a> <a href="#">read
+										<a href="${movie.youtubeTrailer}"><i class="fa fa-play"></i></a> <a href="#">read
 											more</a>
 										<p class="date">${movie.year}</p>
 									</div>

@@ -122,7 +122,6 @@ public class MovieDao {
 
 			preparedStatement.execute();
 			connection.commit();
-			connection.setAutoCommit(true);
 		} catch (SQLException e) {
 			System.out.println("Can't insert movie info into the database");
 			ConnectionOracle.printSQLException(e);

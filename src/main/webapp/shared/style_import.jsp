@@ -14,9 +14,12 @@
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
 
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+	
+<link rel="stylesheet" href="venobox/venobox.css" type="text/css"
+	media="screen" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/venobox.min.css">
 
