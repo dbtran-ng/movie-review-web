@@ -19,11 +19,10 @@ public class LoginDao {
 		try {
 			Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
 			PreparedStatement preparedStatement = connection
-					.prepareStatement("select * from login where user_name = ? and user_password = ?");
+					.prepareStatement("select * from loginusers where user_name = ? and user_password = ?");
 			preparedStatement.setString(1, loginUsers.getUsername());
 			preparedStatement.setString(2, loginUsers.getPassword());
 
-			System.out.println(preparedStatement);
 			ResultSet rs = preparedStatement.executeQuery();
 			status = rs.next();
 
@@ -37,7 +36,7 @@ public class LoginDao {
     public static UsersLogin findUser(Connection conn,
             String userName, String password) throws SQLException {
  
-        String sql = "Select user_name, user_password from LOGIN "
+        String sql = "Select user_name, user_password from loginusers "
                 + " where user_name = ? and user_password= ?";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
@@ -57,7 +56,7 @@ public class LoginDao {
  
     public static UsersLogin findUser(Connection conn, String userName) throws SQLException {
  
-        String sql = "Select user_name, user_password from LOGIN " 
+        String sql = "Select user_name, user_password from loginusers " 
                 + " where user_name = ?";
  
  

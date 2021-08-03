@@ -13,7 +13,8 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
- 
+
+import model.AdminLogin;
 import model.UsersLogin;
 import utils.DBUtils;
 import utils.MyUtils;
@@ -41,8 +42,9 @@ public class CookieFilter implements Filter {
         HttpSession session = req.getSession();
  
         UsersLogin userInSession = MyUtils.getLoginedUser(session);
-        // 
-        if (userInSession != null) {
+
+       
+        if (userInSession != null ) {
             session.setAttribute("COOKIE_CHECKED", "CHECKED");
             chain.doFilter(request, response);
             return;

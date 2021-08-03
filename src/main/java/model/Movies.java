@@ -12,24 +12,24 @@ public class Movies implements Serializable {
     private String country;
     private int year;
     private String description;
-    private String youtubeTrailer;
     private String imagePath;
+    private String youtubeTrailer;
     private List<Review> reviews = new ArrayList<>();
     private String rating;
 
     public Movies(String title, String country, int year,
-                 String description, String youtubeTrailer, String imagePath) {
+                 String description, String imagePath, String youtubeTrailer) {
         this.title = title;
         this.country = country;
         this.year = year;
         this.description = description;
-        this.youtubeTrailer = youtubeTrailer;
         this.imagePath = imagePath;
+        this.youtubeTrailer = youtubeTrailer;
 
     }
 
     public Movies(int movie_id, String title, String country, int year,
-                 String description, String youtubeTrailer, String imagePath) {
+                 String description,String imagePath, String youtubeTrailer) {
     	this.movie_id = movie_id;
         this.title = title;
         this.country = country;

@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,9 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.RegisterDao;
 import model.UsersRegister;
+import utils.MyUtils;
 
 @WebServlet("/register")
-public class RegisterController extends HttpServlet {
+public class UsersRegisterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private RegisterDao registerDao;
 
@@ -34,7 +36,10 @@ public class RegisterController extends HttpServlet {
 
 	protected void register(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		Connection conn = MyUtils.getStoredConnection(request);
+		boolean result = false;
+		String errorString = null;
+		
 		String email = request.getParameter("email");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -43,28 +48,32 @@ public class RegisterController extends HttpServlet {
 		String address = request.getParameter("address");
 		String state = request.getParameter("state");
 
-		UsersRegister users = new UsersRegister(firstName, lastName, address, state, username, password, email);
+		UsersRegister users = new UsersRegister();
 
 		users.setFirstName(firstName);
 		users.setLastName(lastName);
 		users.setUsername(username);
 		users.setPassword(password);
-		users.setAddress(email);
+		users.setEmail(email);
 		users.setAddress(address);
 		users.setState(state);
 		try {
-			boolean result = registerDao.registerUsers(users);
-			if (result == true) {
-				request.setAttribute("NOTIFICATION", "User Registered Successfully!");
-
-			}
-
+			RegisterDao.registerUsers(users);
+			RegisterDao.registerLogin();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			errorString = e.getMessage();
 		}
-		RequestDispatcher dispatcher //
-				= this.getServletContext().getRequestDispatcher("/WEB-INF/view/login.jsp");
-		dispatcher.forward(request, response);
+
+		if (errorString != null) {
+			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/view/signup.jsp");
+			dispatcher.forward(request, response);
+		}
+
+		else {
+			response.sendRedirect(request.getContextPath() + "/login");
+		}
+		
+
 	}
 }

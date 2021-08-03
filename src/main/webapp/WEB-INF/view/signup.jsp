@@ -28,10 +28,10 @@
                         <a class="nav-link" href="home">HOME</a>
                     </li>
                     <li class="nav-item line">
-                        <a class="nav-link" href="login">SIGN IN</a>
+                        <a class="nav-link" href="login">LOG IN</a>
                     </li>
                     <li class="nav-item active line">
-                        <a class="nav-link" href="register">REGISTER</a>
+                        <a class="nav-link" href="register">SIGN UP</a>
                     </li>
                 </ul>
             </div>
@@ -83,7 +83,7 @@
                                 href="#">Privacy Policy for WhatToWatch.</a></span>
                     </div>
             </fieldset>
-            <button type="submit" href="login">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 

@@ -52,6 +52,7 @@ html,body{
     text-align: center;
     background-color: white;
     transition: all 0.5s;
+	width: auto;
 }
 
 .movies__item i{
@@ -120,6 +121,7 @@ html,body{
     transition: 0.5s;
     color: white;
 }
+
 
 .movies__video:hover i{
     transform:translate(-50%,-50%) scale(0.9);

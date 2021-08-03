@@ -19,13 +19,17 @@
 
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/venobox.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/index.css">
+
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/login.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/index.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/header.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/signup.css">
-	<link rel="stylesheet"
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/movies.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/movie.css">
+

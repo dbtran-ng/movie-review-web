@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,19 +18,17 @@
 
 
 		<div class="search__form d-flex flex-row-reverse align-items-center">
-
-			<div class="search__button">
-				<button type="submit" class="btn btn-primary mb-2">Search</button>
-			</div>
-			
 			<div class="search__bar">
-			<form class="form-inline">
-				<div class="form-group mx-sm-3 mb-2">
-					<label for="search" class="sr-only">Search Any Movies</label> <input
-						type="search" class="form-control" id="search"
-						placeholder="Search Any Movies">
-				</div>
-			</form>			
+				<form class="form-inline" method="post"
+					action="<%=request.getContextPath()%>/searchMovie">
+					<div class="form-group mx-sm-3 mb-2">
+						<input type="text" name="title" placeholder="Search any movies" />
+					</div>
+					<div class="search__button">
+						<button type="submit" class="btn btn-primary mb-2">Search</button>
+					</div>
+
+				</form>
 			</div>
 
 
@@ -37,7 +36,7 @@
 
 
 		<nav class="navbar navbar-expand-md px-0">
-			<a class="navbar-brand" href="#"> <img src="./img/logo.svg"
+			<a class="navbar-brand" href="movies"> <img src="./img/logo.svg"
 				alt="logo">
 				<p>What to Watch</p>
 			</a>
@@ -50,12 +49,12 @@
 			<div class="collapse navbar-collapse" id="movieNavBar">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active line"><a class="nav-link"
-						href="<%= request.getContextPath() %>/home">HOME</a></li>
+						href="<%=request.getContextPath()%>/movies">HOME</a></li>
 					<li class="nav-item line"><a class="nav-link" href="#">Hello
 							<b>${loginedUser.username}
 					</a></li>
 					<li class="nav-item line"><a class="nav-link"
-						href="<%= request.getContextPath() %>/home">LOG OUT</a></li>
+						href="<%=request.getContextPath()%>/home">LOG OUT</a></li>
 				</ul>
 
 			</div>

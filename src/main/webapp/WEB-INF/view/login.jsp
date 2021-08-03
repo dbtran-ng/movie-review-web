@@ -42,6 +42,7 @@
     <div class="login">
         <form action="<%=request.getContextPath()%>/login" method="post">
             <h1>Log in to your account</h1>
+             <p style="color: red;">${errorString}</p>
             <fieldset>
                 <legend>
                     <h3>Account Details</h3>

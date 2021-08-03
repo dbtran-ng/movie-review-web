@@ -36,6 +36,9 @@ public class UsersRegister implements Serializable {
 		this.password = password;
 		this.email = email;
 	}
+	public UsersRegister() {
+
+	}
 	public String getUserid() {
 		return userid;
 	}
