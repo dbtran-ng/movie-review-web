@@ -51,7 +51,8 @@ public class RegisterDao {
 	}
 
 	public static void registerLogin() throws ClassNotFoundException {
-		String INSERT_LOGIN_SQL = "insert into LOGINUSERS select user_name, user_password from MOVIEUSERS";
+		String INSERT_LOGIN_SQL = "insert into LOGINUSERS select distinct(user_name), user_password from MOVIEUSERS"
+				+ " where NOT EXISTS(Select user_name from loginusers where loginusers.user_name = movieusers.user_name)";
 
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		try {
