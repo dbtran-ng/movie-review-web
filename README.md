@@ -3,7 +3,7 @@ To run fully functional Movie Review Web page, there are some requirements need 
 
 ## Features
 - Add / edit / remove Reviews
-- Add / edit / remove Movie by using Admin Account
+- Add / edit / remove Movie by Admin Account ( which only can create AdminAccount manually in SQLDeveloper)
 - Register / login page
 - List all Movies / List all Reviews
 - Search Movies by Movie Title
