@@ -44,6 +44,7 @@ To run fully functional Movie Review Web page, there are some requirements need 
 ## Now, start to import MOVIE REVIEW APPLICATION
 - Install and import code from Github
 - Oracle JDBC Driver communicates with the server to connect and process data in Oracle Database. The connection using jdbcURL:jdbc:oracle:thin:@localhost:1521:xe, User: "hr", Password: 'hr' and needed to be modified when import to match your DBMS.
+- Inside webapp/WEB-INF folder, use SQLDeveloper to run createdb.sql script to create data table in Oracle 11g Database.
 - The application using Apache Tomcat which is a Java application server for building and deploying Java Web applications. Accessible with URL: http://localhost:8081/MovieReviewProject/ when run.
 
 
