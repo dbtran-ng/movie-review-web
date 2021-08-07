@@ -38,6 +38,13 @@ CREATE TABLE REVIEW(
 	FOREIGN KEY (author_name) REFERENCES LOGINUSERS(user_name)
 		ON DELETE CASCADE
 );
+
+CREATE TABLE MOVIESADMIN(
+	admin_username VARCHAR2(50),
+	admin_password VARCHAR2(50),
+	PRIMARY KEY (admin_username) 
+);
+
 create sequence users_id_seq start with 1 nocache;
 create sequence movie_id_seq start with 1 nocache;
 create sequence review_id_seq start with 1 nocache;
